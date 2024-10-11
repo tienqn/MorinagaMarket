@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'NotoSansCJKjp-Bold';
+  src: url('../fonts/NotoSansCJKjp-Bold.eot');
+  src: url('../fonts/NotoSansCJKjp-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/NotoSansCJKjp-Bold.woff2') format('woff2'), 
+       url('../fonts/NotoSansCJKjp-Bold.woff') format('woff'), 
+       url('../fonts/NotoSansCJKjp-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Black';
+  src: url('../fonts/NotoSansJP-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Bold';
+  src: url('../fonts/NotoSansJP-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSansJP-Medium';
+  src: url('../fonts/NotoSansJP-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'TTEditFont';
+  src: url('../fonts/Pi_Do-butsu.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  font-family: 'NotoSansCJKjp-Bold', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #EEEEEE;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #CCCCCC;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #CCCCCC;
+}
+
+.header {
+  margin-top: 10px;
+  &__wraper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__link {
+    text-align: right;
+    button {
+      border: none;
+      background-color: $yellow;
+      padding: 10px;
+
+    }
+  }
+
+  &__branch {
+    text-align: center;
+  }
+}
+
+.hero { 
+  width: 100%;
+  margin-top: 40px;
+  &__img {
+    display: block;
+    width: 100%;
+    max-width: 1380px;
+    margin: 0 auto;
+  }
+}
+
+.issue {
+  margin-top: 40px;
+  &__wraper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'NotoSansJP-Bold', sans-serif;
+    color: $black;
+    font-size: 35px;
+    span {
+      color:$red;
+    }
+  }
+
+  &-content {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    &__item {
+      width: 180px;
+      position: relative;
+      div {
+        height: 180px;
+        background-color: $yellow;
+        border-radius: 50%;
+        text-align: center;
+        p {
+          font-size: 18px;
+          font-family: 'NotoSansJP-Medium', sans-serif;
+          color: $black;
+          -webkit-text-stroke: 0.5px $white;
+          padding-top: 65px;
+          line-height: 32px;
+        }
+      }
+      img {
+        width: 60px;
+        position: absolute;
+        left: 55px;
+        top: 130px;
+      }
+    }
+  }
+}
+
+
