@@ -102,6 +102,38 @@
   margin: 0 auto;
 }
 
+.normal-space-margin {
+  @include normal {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.small-space-margin {
+  @include small {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+.normal-space-padding {
+  @include normal {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.text32 {
+  font-size: 32px;
+}
+
+.text38 {
+  font-size: 38px;
+}
+
+.text40 {
+  font-size: 40px;
+}
+
 .header {
   margin-top: 10px;
   &__link {
@@ -111,10 +143,6 @@
       background-color: $yellow;
       padding: 10px;
 
-    }
-
-    @include small {
-      padding-right: 10px;
     }
   }
 
@@ -131,101 +159,6 @@
     width: 100%;
     max-width: 1380px;
     margin: 0 auto;
-  }
-}
-
-.issue {
-  margin-top: 40px;
-
-  &__title {
-    text-align: center;
-    font-family: 'NotoSansJP-Bold', sans-serif;
-    color: $black;
-    font-size: $font_size_title;
-    span {
-      color:$red;
-    }
-  }
-
-  &-content {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    &__item {
-      width: 180px;
-      position: relative;
-      div {
-        height: 180px;
-        background-color: $yellow;
-        border-radius: 50%;
-        text-align: center;
-        p {
-          font-size: 18px;
-          font-family: 'NotoSansJP-Medium', sans-serif;
-          color: $black;
-          -webkit-text-stroke: 0.5px $white;
-          padding-top: 60px;
-          line-height: 32px;
-        }
-      }
-      img {
-        width: 60px;
-        position: absolute;
-        left: 55px;
-        top: 130px;
-      }
-    }
-
-    @include small {
-      flex-wrap: wrap;
-    }
-  }
-}
-
-.solution {
-  margin-top: 80px;
-  &__wraper {
-    background-color: $yellow;
-    border-radius: 12px;
-    padding: 30px 40px;
-    position: relative;
-  }
-
-  &__title {
-    font-family: 'NotoSansJP-Bold', sans-serif;
-    color: $white;
-    text-align: center;
-    font-size: $font_size_title;
-    margin-bottom: 20px;
-    span {
-      color: $black;
-      background-color: $white;
-      padding: 10px;
-      font-size: 32px;
-    }
-  }
-
-  &-content {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    &__item{
-      text-align: center;
-      background-color: $white;
-      border-radius: 12px;
-      padding: 25px;
-    }
-
-    @include small {
-      flex-wrap: wrap;
-    }
-  }
-
-  &__icon {
-    position: absolute;
-    top: 0;
-    left: 49%;
   }
 }
 
@@ -258,19 +191,28 @@
   &__wraper {
     background-color: $bg_gray;
     padding: 50px 0 30px 0;
+
+    @include normal {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 
   &-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 20px;
     margin-bottom: 15px;
+    padding-right: 0;
+    padding-left: 0;
+
 
     @include small {
       flex-wrap: wrap;
       justify-content: center;
       &__item {
         margin-bottom: 20px;
+        width: 400px;
       }
     }
 
@@ -279,23 +221,40 @@
       border-radius: 12px;
       text-align: center;
       position: relative;
-      padding: 20px 20px 10px 20px;
+      padding: 20px 20px 20px 20px;
+      height: auto;
+
       img:first-child {
         position: absolute;
         top: -26px;
         left: 0;
       }
       div {
-          background-color: $yellow;
-          margin-bottom: 10px;
+        display: inline-flex;
+        background-color: $yellow;
+        margin-bottom: 10px;
+        padding: 5px;
       }
       p {
         font-size: 14px;
         font-family: 'NotoSansJP-Regular', sans-serif;
         text-align: left;
       }
-      img:last-child {
-        width: 100%;
+      .text-custome {
+        padding-left: 35px;
+        padding-top: 30px;
+
+        @include small {
+          padding-top: 10px;
+        }
+
+      }
+      .point-thumbnail {
+        width: 70%;
+
+        &--custome {
+          width: 100%;
+        }
       }
     }
   }
@@ -323,11 +282,10 @@
 
   &-content {
     display: flex;
-    gap:5px;
+    gap:10px;
     justify-content: space-between;
 
     &__item {
-      flex: 1;
       div:first-child {
         background-color: $yellow;
         color: $white;
@@ -357,6 +315,9 @@
         font-size: 14px;
         padding: 4px;
       }
+    }
+
+    @include small {
     }
   }
 
@@ -445,3 +406,179 @@ footer {
   text-align: center;
   padding: 40px 0;
 }
+
+.issue {
+
+  margin-top: 20px;
+  &__wrapper {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: "Noto Sans JP-Bold", Helvetica;
+    font-size: 32px;
+    line-height: normal;
+    color: #000000;
+    margin-bottom: 32px;
+    text-align: center;
+
+    span {
+      color: #f46868;
+      font-size: 38px;
+    }
+  }
+
+  &-content {
+    display: inline-flex;
+    gap: 38px;
+
+    &__item {
+      width: 182px;
+      position: relative;
+    }
+
+    &__ellipse {
+      width: 180px;
+      height: 180px;
+      background-color: #f1c40f;
+      border-radius: 90px;
+    }
+
+    &__image {
+      top: 127px;
+      left: 57px;
+      position: absolute;
+      object-fit: cover;
+
+      &--center {
+        width: 88px;
+        height: 125px;
+        top: 110px;
+        left: 43px;
+      }
+
+      &--second {
+        left: 42px;
+        top: 108px;
+      }
+    }
+
+    &__text {
+      top: 65px;
+      left: 36px;
+      position: absolute;
+
+      &--second {
+        left: 28px;
+      }
+
+      &--last {
+        left: 6px;
+      }
+    }
+
+    @include small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 80px;
+    }
+  }
+
+}
+
+.solution {
+  margin-top: 80px;
+
+  &__wrapper {
+    background-color: #F1C40F;
+    border-radius: 12px;
+    padding-bottom: 30px;
+  }
+  
+  &__icon {
+    text-align: center;
+  }
+
+  &__title {
+    p {
+      font-family: "Noto Sans JP-Bold", Helvetica;
+      font-size: 40px;
+      text-align: center;
+      padding: 30px 0 40px 0;
+      color: #ffffff;
+
+      .text-wrapper {
+        color: #000000;
+        background-color: #ffffff;
+        padding: 10px 0 10px 10px;
+        @include small {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &-content {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+
+    &__item {
+      position: relative;
+      width: 288px;
+      height: 286px;
+      background-color: #ffffff;
+      border-radius: 12px;
+
+      img {
+        position: absolute;
+        top: 90px;
+        left: 25px;
+        object-fit: cover;
+
+        @include normal {
+          width: 200px;
+          height: auto;
+          top: 100px;
+          left: 35px;
+        }
+
+        @include large {
+          width: 239px;
+          height: 167px;
+        }
+
+        @include medium {
+          width: 239px;
+          height: 167px;
+        }
+      }
+
+      div {
+        position: absolute;
+        top: 23px;
+        left: 84px;
+        font-family: "Noto Sans JP-Bold", Helvetica;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+        line-height: normal;
+      }
+
+      .first-title {
+        left: 55px;
+      }
+    }
+
+    @include small {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+}
+
+
