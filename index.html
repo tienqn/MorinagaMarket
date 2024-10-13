@@ -25,21 +25,18 @@
         <div class="issue">
             <div class="issue__wrapper">
                 <div class="issue__title"><p>こんな<span>お悩み</span>ありませんか？</p></div>
-                <div class="issue-content">
-                    <div class="issue-content__item">
-                        <div class="issue-content__ellipse"></div>
-                        <img class="issue-content__image" src="./images/img_issue_1.svg">
-                        <div class="issue-content__text"><img src="./images/img_issue_text_1.svg"></div>
+                <div class="issue__content">
+                    <div class="issue-item">
+                        <div class="issue-item__text"><img src="./images/img_issue_text_1.svg"></div>
+                        <img class="issue-item__image" src="./images/img_issue_1.svg">
                     </div>
-                    <div class="issue-content__item">
-                        <div class="issue-content__ellipse"></div>
-                        <img class="issue-content__image issue-content__image--second" src="./images/img_issue_2.svg">
-                        <div class="issue-content__text  issue-content__text--second"><img src="./images/img_issue_text_2.svg"></div>
+                    <div class="issue-item">
+                        <div class="issue-item__text"><img src="./images/img_issue_text_2.svg"></div>
+                        <img class="issue-item__image issue-item__image--small" src="./images/img_issue_2.svg">
                     </div>
-                    <div class="issue-content__item">
-                        <div class="issue-content__ellipse"></div>
-                        <img class="issue-content__image" src="./images/img_issue_3.svg">
-                        <div class="issue-content__text issue-content__text--last"><img src="./images/img_issue_text_3.svg"></div>
+                    <div class="issue-item">
+                        <div class="issue-item__text"><img src="./images/img_issue_text_3.svg"></div>
+                        <img class="issue-item__image" src="./images/img_issue_3.svg">
                     </div>
                 </div>
             </div>
@@ -50,20 +47,26 @@
             <div class="container solution__wrapper">
                 <div class="solution__icon"><span class="triangle-down"></span></div>
                 <div class="solution__title">
-                    <p><span class="text40">オフィス</span><span class="text32">に</span><span class="text38">inゼリー</span><span class="text32">で</span><span class="text32 text-wrapper">解決できます ！</span></p>
+                    <p class="solution-title">
+                        <span class="solution-title__large">オフィス</span>
+                        <span class="solution-title__small">に</span>
+                        <span class="solution-title__medium">inゼリー</span>
+                        <span class="solution-title__small ">で</span>
+                        <span class="solution-title__small solution-title__small--highlight">解決できます ！</span>
+                    </p>
                 </div>
-                <div class="solution-content normal-space-padding">
-                    <div class="solution-content__item">
-                        <img src="./images/img_solution_1.svg" />
-                        <div class="first-title">健康に配慮した<br />森永製菓のinゼリー</div>
+                <div class="solution__content">
+                    <div class="solution-item">
+                        <div class="solution-item__title">健康に配慮した<br />森永製菓のinゼリー</div>
+                        <img class="solution-item__thumbnail" src="./images/img_solution_1.svg" />
                     </div>
-                    <div class="solution-content__item">
-                        <img src="./images/img_solution_2.svg" />
-                        <div>働きやすい<br>環境づくりに</div>
+                    <div class="solution-item">
+                        <div class="solution-item__title">働きやすい<br>環境づくりに</div>
+                        <img class="solution-item__thumbnail" src="./images/img_solution_2.svg" />
                     </div>
-                    <div class="solution-content__item">
-                        <img src="./images/img_solution_3.svg" />
-                        <div>採用のPRに</div>
+                    <div class="solution-item">
+                        <div class="solution-item__title">採用のPRに</div>
+                        <img class="solution-item__thumbnail" src="./images/img_solution_3.svg" />
                     </div>
                 </div>
             </div>
@@ -76,24 +79,24 @@
                 <p class="point__sub">いつでも健康的に栄養補給が可能な、<br><span>福利厚生</span> サービスです</p>
             </div>
             <div class="point__wraper">
-                <div class="container point-content">
-                    <div class="point-content__item">
-                        <img class="image-icon" src="./images/img_mark_1.svg">
-                        <div>好きな時に栄養補給</div>
-                        <img class="point-thumbnail point-thumbnail--custome" src="./images/img_point_1.svg">
-                        <p class="text-custome">オフィスに商品が届くので、<br>いつでも利用できます。</p>
+                <div class="container point__content">
+                    <div class="point-item">
+                        <img class="point-item__icon" src="./images/img_mark_1.svg">
+                        <div class="point-item__title point-item__title--high">好きな時に栄養補給</div>
+                        <img class="point-item__thumbnail" src="./images/img_point_1.svg">
+                        <p class="point-item__description point-item__description--indent">オフィスに商品が届くので、<br>いつでも利用できます。</p>
                     </div>
-                    <div class="point-content__item">
-                        <img class="image-icon" src="./images/img_mark_2.svg">
-                        <div>6種類のinゼリーから選べる！</div>
-                        <img class="point-thumbnail" src="./images/img_point_2.svg">
-                        <p>エネルギー、マルチビタミン、<br> マルチミネラル、プロテイン、<br>フルーツ食感2種からお選びいただけます。</p>
+                    <div class="point-item">
+                        <img class="point-item__icon" src="./images/img_mark_2.svg">
+                        <div class="point-item__title point-item__title--custom">6種類のinゼリーから選べる！</div>
+                        <img class="point-item__thumbnail" src="./images/img_point_2.svg">
+                        <p class="point-item__description point-item__description--down">エネルギー、マルチビタミン、<br> マルチミネラル、プロテイン、<br>フルーツ食感2種からお選びいただけます。</p>
                     </div>
-                    <div class="point-content__item">
-                        <img class="image-icon" src="./images/img_mark_3.svg">
-                        <div>冷蔵庫を設置するだけで、<br>低コストで開始</div>
-                        <img class="point-thumbnail" src="./images/img_point_3.svg">
-                        <p>月最低２ケース(36個/ケース)より<br>承っております。<br>ご購入数量はご要望に応じて変更可能です。<br>※冷蔵庫はイメージです</p>
+                    <div class="point-item">
+                        <img class="point-item__icon" src="./images/img_mark_3.svg">
+                        <div class="point-item__title">冷蔵庫を設置するだけで、<br>低コストで開始</div>
+                        <img class="point-item__thumbnail" src="./images/img_point_3.svg">
+                        <p class="point-item__description">月最低２ケース(36個/ケース)より<br>承っております。<br>ご購入数量はご要望に応じて変更可能です。<br>※冷蔵庫はイメージです</p>
                     </div>
                 </div>
                 <div class="container point__note">
@@ -109,38 +112,41 @@
         <div class="process  normal-space-margin small-space-margin">
             <div class="process__title">導入の流れ</div>
             <div class="container process__wraper">
-                <div class="process-content">
-                    <div class="process-content__item">
-                        <div class="content-wrapper">
-                            <img class="content-wrapper__icon" src="./images/icons/ico_process_1.svg">
-                            <p>お問い合わせ</p>
-                            <img class="content-wrapper__arrow" src="./images/icons/ico_process_5.svg">
+                <div class="process__content">
+                    <div class="process-item">
+                        <div class="process-item-wrapper">
+                            <img class="process-item-wrapper__icon" src="./images/icons/ico_process_1.svg">
+                            <p class="process-item-wrapper__title">お問い合わせ</p>
+                            <img class="process-item-wrapper__arrow" src="./images/icons/ico_process_5.svg">
                         </div>
-                        <div class="process-content__text">フォームよりお問い合わせください</div>
+                        <div class="process-item__text">フォームよりお問い合わせください</div>
                     </div>
-                    <div class="process-content__item process-content__item--hide-ico">
-                        <div class="content-wrapper">
-                            <img class="content-wrapper__icon" src="./images/icons/ico_process_2.svg">
-                            <p>サービスの<br>ご説明</p>
-                            <img class="content-wrapper__arrow content-wrapper__arrow--hide" src="./images/icons/ico_process_5.svg">
+
+                    <div class="process-item">
+                        <div class="process-item-wrapper">
+                            <img class="process-item-wrapper__icon" src="./images/icons/ico_process_2.svg">
+                            <p class="process-item-wrapper__title">サービスの<br>ご説明</p>
+                            <img class="process-item-wrapper__arrow" src="./images/icons/ico_process_5.svg">
                         </div>
-                        <div class="process-content__text">オンラインでサービスのご説明を<br>させていただきます。</div>
+                        <div class="process-item__text">オンラインでサービスのご説明を<br>させていただきます。</div>
                     </div>
-                    <div class="process-content__item">
-                        <div class="content-wrapper">
-                            <img class="content-wrapper__icon" src="./images/icons/ico_process_3.svg">
-                            <p>お申し込み</p>
-                            <img class="content-wrapper__arrow" src="./images/icons/ico_process_5.svg">
+
+                    <div class="process-item">
+                        <div class="process-item-wrapper">
+                            <img class="process-item-wrapper__icon" src="./images/icons/ico_process_3.svg">
+                            <p class="process-item-wrapper__title">お申し込み</p>
+                            <img class="process-item-wrapper__arrow" src="./images/icons/ico_process_5.svg">
                         </div>
-                        <div class="process-content__text">所定のお申込フォームより、お申込を<br>お願い致します。</div>
+                        <div class="process-item__text">所定のお申込フォームより、お申込を<br>お願い致します。</div>
                     </div>
-                    <div class="process-content__item">
-                        <div class="content-wrapper">
-                            <img class="content-wrapper__icon" src="./images/icons/ico_process_4.svg">
-                            <p>ご利用開始</p>
-                            <img class="content-wrapper__arrow content-wrapper__arrow--last" src="./images/icons/ico_process_5.svg">
+                    
+                    <div class="process-item">
+                        <div class="process-item-wrapper">
+                            <img class="process-item-wrapper__icon" src="./images/icons/ico_process_4.svg">
+                            <p class="process-item-wrapper__title">ご利用開始</p>
+                            <img class="process-item-wrapper__arrow process-item-wrapper__arrow--hide" src="./images/icons/ico_process_5.svg">
                         </div>
-                        <div class="process-content__text">冷蔵庫のお届けと、商品の配送を<br>行います。</div>
+                        <div class="process-item__text">冷蔵庫のお届けと、商品の配送を<br>行います。</div>
                     </div>
                 </div>
             </div>
