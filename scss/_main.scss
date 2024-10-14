@@ -126,16 +126,26 @@
   margin-top: 10px;
   &__link {
     text-align: right;
-    button {
-      border: none;
-      background-color: $yellow;
-      padding: 10px;
+  }
 
-    }
+  &__text {
+    border: none;
+    background-color: $yellow;
+    padding: 10px;
+      @include small {
+        margin-right: 10px;
+        font-size: 12px;
+        padding: 5px;
+      }
   }
 
   &__branch {
     text-align: center;
+    img {
+      @include small {
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -147,6 +157,9 @@
     width: 100%;
     max-width: 1380px;
     margin: 0 auto;
+  }
+  @include small {
+    margin-top: 0;
   }
 }
 
@@ -370,11 +383,9 @@
 }
 
 .issue {
-
-  margin-top: 20px;
-  &__wrapper {
-    max-width: 620px;
-    margin: 0 auto;
+  margin: 30px 0;
+  @include small {
+    margin: 10px 0;
   }
 
   &__title {
@@ -388,43 +399,49 @@
     span {
       color: #f46868;
       font-size: 38px;
+      @include small {
+        font-size: 24px;
+      }
+    }
+    @include small {
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
     }
   }
-
   &__content {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 40px;
-
     @include small {
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 20px;
     }
   }
-
   &-item {
     background-color: #f1c40f;
+    width: 100%;
+    max-width: 180px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    text-align: center;
-
+    position: relative;
     &__text {
-      position: relative;
+      position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
     &__image {
-      padding-top: 40%;
-      &--small {
-        padding-top: 30%;
-      }
+      position: absolute;
+      top: 99%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include small {
+      margin-bottom: 30px;
     }
   }
-
 }
-
 .triangle-down {
   display: inline-block;
   width: 0;
@@ -513,6 +530,119 @@
       width: 100%;
     }
   }
+}
+
+.solution {
+  @include small {
+    margin-top: 40px;
+  }
+  
+  &__icon {
+    text-align: center;
+  }
+
+  &__wrapper {
+    background-color: #F1C40F;
+    border-radius: 20px;
+    padding: 0 10px 25px 10px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 10px;
+    }
+
+    @include small {
+      padding-bottom: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-family: "Noto Sans JP-Bold", Helvetica;
+    font-size: 0;
+    text-align: center;
+    padding: 30px 0 40px 0;
+    color: #ffffff;
+    @include small {
+      padding-top: 10px;
+    }
+  }
+  &-title {
+    font-size: 38px;
+    @include small {
+      font-size: 30px;
+    }
+
+    &--large  {
+      font-size: 40px;
+      @include small {
+        font-size: 34px;
+      }
+    }
+
+    &--small  {
+      font-size: 32px;
+      @include small {
+        font-size: 22px;
+      }
+    }
+    
+    &--highlight {
+      color: #000000;
+      background-color: #ffffff;
+      padding: 10px 0 10px 10px;
+      @include small {
+        display: inline-block;
+      }
+    }
+  }
+  &-item:last-child {
+    @media screen and (max-width: 768px) {
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    @include small {
+      margin-top: 0;
+      margin-bottom: 50px;
+    }
+  }
+  &-item {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 288px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    padding-top: 90px;
+    text-align: center;
+    border-radius: 12px;
+
+    &__thumbnail {
+      width: 90%;
+    }
+
+    &__title {
+      position: absolute;
+      top: 8%;
+      left: 50%;
+      transform: translate(-50%, 5%);
+      font-family: "Noto Sans JP-Bold", Helvetica;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: normal;
+      width: 100%;
+      @include small {
+        font-size: 18px;
+      }
+    }
+    @include small {
+      margin-bottom: 40px;
+    }
+  }
+
 }
 
 .faq {
